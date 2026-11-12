@@ -23,7 +23,11 @@ public with sharing class TokenExpiryBatch implements Database.Batchable<SObject
     for (Token__c token : scope) {
       token.Status__c = 'Expired';
     }
-    update scope;
+    SObjectAccessDecision decision = Security.stripInaccessible(
+      AccessType.UPDATABLE,
+      scope
+    );
+    update decision.getRecords();
   }
 
   /**

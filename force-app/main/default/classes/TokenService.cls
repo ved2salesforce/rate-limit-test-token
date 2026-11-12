@@ -37,7 +37,12 @@ public with sharing class TokenService {
       new List<Token__c>{ token }
     );
     insert decision.getRecords();
-    return (Token__c) decision.getRecords()[0];
+    return [
+      SELECT Id, Name, Status__c, Issued_Date__c, Expiry_Date__c, Scope__c
+      FROM Token__c
+      WHERE Id = :decision.getRecords()[0].Id
+      WITH USER_MODE
+    ];
   }
 
   /**

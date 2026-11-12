@@ -11,6 +11,7 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <label>Token</label>
+    <description>Represents an API token issued to an Account, tracking its lifecycle (Active, Expired, Revoked).</description>
     <nameField>
         <label>Token Name</label>
         <trackFeedHistory>false</trackFeedHistory>
