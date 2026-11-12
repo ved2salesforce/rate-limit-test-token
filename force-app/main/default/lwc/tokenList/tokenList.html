@@ -1,0 +1,19 @@
+<template>
+  <lightning-card title="Tokens" icon-name="standard:token_connected">
+    <div class="slds-m-around_medium">
+      <template lwc:if={tokens}>
+        <lightning-datatable
+          key-field="id"
+          data={tokens}
+          columns={columns}
+          hide-checkbox-column
+        ></lightning-datatable>
+      </template>
+      <template lwc:if={error}>
+        <p class="slds-text-color_error">
+          An error occurred loading tokens. Please try again.
+        </p>
+      </template>
+    </div>
+  </lightning-card>
+</template>
