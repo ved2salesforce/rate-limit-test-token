@@ -15,11 +15,6 @@
     </objectPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Token__c.Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Token__c.Issued_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
