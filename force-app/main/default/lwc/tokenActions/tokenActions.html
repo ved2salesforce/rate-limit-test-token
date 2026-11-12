@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="Token Actions" icon-name="utility:key">
+    <div class="slds-m-around_medium">
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+          <lightning-button
+            label="Issue Token"
+            variant="brand"
+            onclick={handleIssue}
+          ></lightning-button>
+        </div>
+        <div class="slds-col">
+          <lightning-button
+            label="Revoke Token"
+            variant="destructive"
+            onclick={handleRevoke}
+            disabled={isRevokeDisabled}
+          ></lightning-button>
+        </div>
+      </div>
+    </div>
+  </lightning-card>
+</template>
